@@ -333,6 +333,7 @@ sup {
 
 /* Links */
 a {
+    word-wrap: break-word;
     color: var(--color-secondary);
     display: inline-block;
     font-weight: normal;
