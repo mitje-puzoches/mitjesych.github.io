@@ -99,7 +99,7 @@ header
 {
     margin: 0 auto;
     max-width: var(--width-content);
-    padding: 2rem 0rem;
+    padding: 1rem 0rem;
 }
 
 main {
@@ -412,6 +412,26 @@ figure img {
 
 figure figcaption {
     color: var(--color-text-secondary);
+    margin-left: 1rem;
+}
+
+.videoWrapper {
+  position: relative;
+  height: 0;
+}
+.videoWrapper iframe {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 43%;
+  margin-right: 100%;
+}
+
+.textblock {
+    width: 40%;
+    margin-left: 1rem;
+    margin-top: 3rem;
+    padding-top: 3rem;
 }
 
 /* Forms */
