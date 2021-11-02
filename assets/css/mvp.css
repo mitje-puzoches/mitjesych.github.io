@@ -49,8 +49,6 @@
     width: var(--width-card);
     height: auto;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
 
 }
 
@@ -60,6 +58,13 @@
 
 #tiles p {
     margin-top: 1rem;
+}
+
+.tilediv {
+
+    height: var(--width-card);
+    width: var(--width-card);
+}
 }
 
 h3 {
@@ -139,12 +144,14 @@ section aside {
     width: var(--width-card);
     height: var(--width-card);
     justify-content: left;
+    transition: 0.1 s;
+
 }
 
 section aside:hover {
     border: 10px solid var(--color-bg-secondary);
     box-shadow: var(--box-shadow) var(--color-shadow);
-    transform: scale(2.5,2.5);
+    transform: scale(7, 7);
 }
 
 section aside img {
@@ -348,6 +355,7 @@ a {
     display: inline-block;
     font-weight: normal;
     text-decoration: none;
+    transition: 0.3s;
 }
 
 a:hover {
@@ -432,6 +440,13 @@ figure figcaption {
     margin-left: 1rem;
     margin-top: 0rem;
     padding-top: 0rem;
+}
+
+.gallery img {
+
+    width: 315px;
+    height: 315px;
+    object-fit: cover;
 }
 
 /* Forms */
