@@ -1,15 +1,13 @@
-/* MVP.css v1.6.2 - https://github.com/andybrewer/mvp */
-
 :root {
     --border-radius: 0px;
     --box-shadow: 10px 10px 10px;
     --color: black;
-    --color-accent: #0000ff;
+    --color-accent: #578600;
     --color-bg: #fff;
-    --color-bg-secondary: #0000ff;
-    --color-secondary: #0000ff;
-    --color-secondary-accent: #0000ff;
-    --color-shadow: #ffff00;
+    --color-bg-secondary: #578600;
+    --color-secondary: #578600;
+    --color-secondary-accent: #578600;
+    --color-shadow: #ffffff;
     --color-text: #000;
     --color-text-secondary: #999;
     --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
@@ -23,33 +21,51 @@
     --width-content: 100%;
 }
 
-/*
-@media (prefers-color-scheme: dark) {
-    :root {
-        --color: #0097fc;
-        --color-accent: #0097fc4f;
-        --color-bg: #333;
-        --color-bg-secondary: #555;
-        --color-secondary: #e20de9;
-        --color-secondary-accent: #e20de94f;
-        --color-shadow: #bbbbbb20;
-        --color-text: #f7f7f7;
-        --color-text-secondary: #aaa;
-    }
+header p {
+    margin-top: 0;
+    margin-bottom: 0;
 }
-*/
+
+.chercon .textblock {
+    color: #dfdfdf;
+    background-color: #181818;
+    font-size: larger;
+}
+
+.chercon img {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.chercon .textblock p {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.chercon .credits {
+    margin-top: 9rem;
+    font-size: large;
+    width: 30vw;
+    padding-bottom: 3rem;
+}
+
+
+
+.credits {
+    margin-top: 9rem;
+    font-size: large;
+    width: 30vw;
+    padding-bottom: 3rem;
+}
 
 #tiles {
-
     word-wrap: break-word;
 }
 
 #tiles img{
-
     width: var(--width-card);
     height: auto;
     display: block;
-
 }
 
 #tiles h4 {
@@ -61,24 +77,12 @@
 }
 
 .tilediv {
-
     height: var(--width-card);
     width: var(--width-card);
-}
-}
-
-h3 {
-
-    margin: 5rem;
-    font-size: 2.5rem;
-    font-weight: 400;
-    padding: 5rem;
-
 }
 
 /* Layout */
 article {
-
     margin-left: 1rem;
     margin-top: 5rem;
 }
@@ -184,10 +188,41 @@ section aside[class="imggallery"]:hover {
     box-shadow: 20px 20px 10px white, -20px 20px 10px white, 20px -20px 10px white, -20px -20px 10px white;
     transform: scale(3.45, 3.45);
     z-index: 2;
-    transform-origin:top right;
+    transform-origin:center;
 }
 
+section[class="imggallery poleradio"] {
+    margin: 3rem 0;
+}
 
+section[class="imggallery poleradio"] aside {
+    
+    border-radius: var(--border-radius);
+    box-shadow: none;
+    margin: 3rem;
+    /*margin-top: 1rem; 
+    margin-bottom: 1rem;
+    /*padding: 1.25rem;*/
+    width: 10vw;
+    height: auto;
+    /*height: var(--width-card);*/
+    /*justify-content: left;*/
+    transition: 1s;
+    z-index: 1;
+}
+
+section[class="imggallery poleradio"] aside:hover {
+    border: none;
+    z-index: 2;
+}
+
+section[class="imggallery poleradio"] aside img:hover {
+    border: none;
+    box-shadow: 20px 20px 10px white, -20px 20px 10px white, 20px -20px 10px white, -20px -20px 10px white;
+    transform: scale(1.45, 1.45);
+    z-index: 2;
+    transform-origin:center;
+}
 
 section aside img {
     width: var(--width-card);
@@ -264,7 +299,7 @@ nav {
 
 nav header h1 {
 
-    margin-top: : 1rem;
+    margin-top: 1rem;
     margin-bottom: 1rem;
 }
 
@@ -471,10 +506,11 @@ figure figcaption {
 }
 
 .textblock {
-    width: 40%;
+    width: 55vw;
     margin-left: 1rem;
     margin-top: 0rem;
     padding-top: 0rem;
+    font-size: larger;
 }
 
 .gallery img {
@@ -482,120 +518,4 @@ figure figcaption {
     width: 315px;
     height: 315px;
     object-fit: cover;
-}
-
-/* Forms */
-
-button:disabled,
-input:disabled {
-    background: var(--color-bg-secondary);
-    border-color: var(--color-bg-secondary);
-    color: var(--color-text-secondary);
-    cursor: not-allowed;
-}
-
-button[disabled]:hover {
-    filter: none;
-}
-
-form {
-    border: 1px solid var(--color-bg-secondary);
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow) var(--color-shadow);
-    display: block;
-    max-width: var(--width-card-wide);
-    min-width: var(--width-card);
-    padding: 1.5rem;
-    text-align: var(--justify-normal);
-}
-
-form header {
-    margin: 1.5rem 0;
-    padding: 1.5rem 0;
-}
-
-input,
-label,
-select,
-textarea {
-    display: block;
-    font-size: inherit;
-    max-width: var(--width-card-wide);
-}
-
-input[type="checkbox"],
-input[type="radio"] {
-    display: inline-block;
-}
-
-input[type="checkbox"]+label,
-input[type="radio"]+label {
-    display: inline-block;
-    font-weight: normal;
-    position: relative;
-    top: 1px;
-}
-
-input,
-select,
-textarea {
-    border: 1px solid var(--color-bg-secondary);
-    border-radius: var(--border-radius);
-    margin-bottom: 1rem;
-    padding: 0.4rem 0.8rem;
-}
-
-input[readonly],
-textarea[readonly] {
-    background-color: var(--color-bg-secondary);
-}
-
-label {
-    font-weight: bold;
-    margin-bottom: 0.2rem;
-}
-
-/* Tables */
-table {
-    border: 1px solid var(--color-bg-secondary);
-    border-radius: var(--border-radius);
-    border-spacing: 0;
-    display: inline-block;
-    max-width: 100%;
-    overflow-x: auto;
-    padding: 0;
-    white-space: nowrap;
-}
-
-table td,
-table th,
-table tr {
-    padding: 0.4rem 0.8rem;
-    text-align: var(--justify-important);
-}
-
-table thead {
-    background-color: var(--color);
-    border-collapse: collapse;
-    border-radius: var(--border-radius);
-    color: var(--color-bg);
-    margin: 0;
-    padding: 0;
-}
-
-table thead th:first-child {
-    border-top-left-radius: var(--border-radius);
-}
-
-table thead th:last-child {
-    border-top-right-radius: var(--border-radius);
-}
-
-table thead th:first-child,
-table tr td:first-child {
-    text-align: var(--justify-normal);
-}
-
-table tr:nth-child(even) {
-    background-color: var(--color-accent);
 }
