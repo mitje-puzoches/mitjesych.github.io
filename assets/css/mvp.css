@@ -190,6 +190,11 @@ section aside[class="imggallery"]:hover {
     z-index: 2;
     transform-origin:center;
 }
+section aside h4 {
+
+    background-color: #fff;
+    z-index: 0;
+}
 
 section[class="imggallery poleradio"] {
     margin: 3rem 0;
